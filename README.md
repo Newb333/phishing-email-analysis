@@ -7,8 +7,9 @@ A controlled phishing email analysis lab covering email headers, SPF/DKIM/DMARC 
 This project analyzes a synthetic phishing email in an isolated, documentation-only context.
 
 The sample uses:
-- .example hostnames rather than real production domains
-- TEST-NET-3 address 203.0.113.50
+
+- `.example` hostnames rather than real production domains
+- TEST-NET-3 address `203.0.113.50`
 - No real credential collection or external infrastructure
 
 ## Analysis Workflow
@@ -21,32 +22,37 @@ The sample uses:
 
 ## Repository Structure
 
-`text
-samples/
-  phishing-example.eml
-headers/
-iocs/
-  ioc-list.txt
-evidence/
-  01-ioc-extraction.txt
-  02-url-analysis.txt
-  03-ioc-list.txt
-screenshots/
-  01-email-sample-and-headers.png
-  02-ioc-extraction.png
-  03-url-static-analysis.png
-  04-ioc-list.png
-reports/
-docs/
-`
+```text
+phishing-email-analysis/
+├── samples/
+│   └── phishing-example.eml
+├── headers/
+├── iocs/
+│   └── ioc-list.txt
+├── evidence/
+│   ├── 01-ioc-extraction.txt
+│   ├── 02-url-analysis.txt
+│   └── 03-ioc-list.txt
+├── screenshots/
+│   ├── 01-email-sample-and-headers.png
+│   ├── 02-ioc-extraction.png
+│   ├── 03-url-static-analysis.png
+│   └── 04-ioc-list.png
+├── reports/
+│   └── Phishing_Email_Analysis_Report.md
+├── docs/
+│   └── methodology.md
+└── README.md
+```
 
 ## Key Observations
 
 The synthetic message contains several phishing indicators:
-- A sender domain using the look-alike string micr0soft.
+
+- A sender domain using the look-alike string `micr0soft`.
 - A Reply-To address on the same look-alike domain.
 - SPF, DKIM, and DMARC results explicitly marked as FAIL in the synthetic headers.
-- A verification URL hosted on a non-brand .example hostname.
+- A verification URL hosted on a non-brand `.example` hostname.
 - Urgency created by a 24-hour account-suspension threat.
 
 These observations describe the constructed sample and should not be interpreted as evidence about any real Microsoft infrastructure.
@@ -54,6 +60,11 @@ These observations describe the constructed sample and should not be interpreted
 ## Evidence
 
 Screenshots and extracted evidence are retained in the repository so the analysis can be reproduced and reviewed.
+
+## Documentation
+
+- [Methodology](docs/methodology.md) — analysis workflow and evidence-preservation process.
+- [Final Report](reports/Phishing_Email_Analysis_Report.md) — consolidated findings, indicators, limitations, and analyst handling.
 
 ## Safety
 
