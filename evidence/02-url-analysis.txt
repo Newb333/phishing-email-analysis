@@ -1,0 +1,21 @@
+=== URL STATIC ANALYSIS ===
+
+[Full URL]
+https://login-microsoft-account.example/verify
+
+[Scheme]
+https
+
+[Host]
+login-microsoft-account.example
+
+[Path]
+/verify
+
+[Domain comparison]
+Claimed brand: Microsoft
+URL domain:    login-microsoft-account.example
+
+[Lookalike sender domain]
+Sender domain:  micr0soft-support.example
+Expected brand: microsoft

@@ -1,0 +1,35 @@
+PHISHING EMAIL IOC LIST
+=======================
+
+Email Addresses
+---------------
+security-alert@micr0soft-support.example
+verify-account@micr0soft-support.example
+
+Domains
+-------
+micr0soft-support.example
+mail.micr0soft-support.example
+login-microsoft-account.example
+
+IP Address
+----------
+203.0.113.50
+
+URL
+---
+https://login-microsoft-account.example/verify
+
+Authentication Results
+----------------------
+SPF: FAIL
+DKIM: FAIL
+DMARC: FAIL
+
+Notable Indicators
+------------------
+- Sender domain uses "micr0soft" with a zero replacing the expected "o".
+- Reply-To address uses the same suspicious domain.
+- Authentication checks are explicitly marked as failed.
+- The verification URL uses a non-Microsoft .example hostname.
+- The message creates urgency by threatening account suspension within 24 hours.

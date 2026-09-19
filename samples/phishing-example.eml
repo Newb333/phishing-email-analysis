@@ -1,0 +1,28 @@
+From: Microsoft Account Security <security-alert@micr0soft-support.example>
+To: analyst@example.local
+Subject: Urgent: Your Microsoft account will be suspended
+Date: Fri, 19 Sep 2026 08:15:22 +0530
+Message-ID: <20260919081522.12345@micr0soft-support.example>
+Reply-To: verify-account@micr0soft-support.example
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Received: from mail.micr0soft-support.example (203.0.113.50)
+        by mail.example.local with ESMTP;
+        Fri, 19 Sep 2026 08:15:20 +0530
+Authentication-Results: mail.example.local;
+        spf=fail smtp.mailfrom=micr0soft-support.example;
+        dkim=fail header.d=micr0soft-support.example;
+        dmarc=fail header.from=micr0soft-support.example
+
+Hello,
+
+We detected unusual activity on your Microsoft account.
+
+Your account will be suspended within 24 hours unless you verify your identity.
+
+Verify your account immediately:
+https://login-microsoft-account.example/verify
+
+If you do not complete verification, access to your account may be restricted.
+
+Microsoft Account Security Team

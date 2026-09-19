@@ -1,0 +1,33 @@
+=== PHISHING EMAIL IOC EXTRACTION ===
+
+[Sender]
+From: Microsoft Account Security <security-alert@micr0soft-support.example>
+
+[Reply-To]
+Reply-To: verify-account@micr0soft-support.example
+
+[Message-ID]
+Message-ID: <20260919081522.12345@micr0soft-support.example>
+
+[Received]
+Received: from mail.micr0soft-support.example (203.0.113.50)
+        by mail.example.local with ESMTP;
+        Fri, 19 Sep 2026 08:15:20 +0530
+
+[Authentication Results]
+Authentication-Results: mail.example.local;
+        spf=fail smtp.mailfrom=micr0soft-support.example;
+        dkim=fail header.d=micr0soft-support.example;
+        dmarc=fail header.from=micr0soft-support.example
+
+[URL]
+https://login-microsoft-account.example/verify
+
+[Suspicious Domains]
+login-microsoft-account.example
+mail.example
+mail.micr0soft-support.example
+micr0soft-support.example
+
+[IP Addresses]
+203.0.113.50
